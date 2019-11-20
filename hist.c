@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define size 10
+#define rozm 10
 int w;
 int main()
 
@@ -12,7 +12,7 @@ scanf("%d",&array[w]);
 }
 
   Najw = array[0];
-  for (i = 0; i < size; ++i)
+  for (i = 0; i < rozm; ++i)
     if(array[i] > Najw)
       Najw = array[i];
   temp = Najw;
@@ -21,7 +21,7 @@ scanf("%d",&array[w]);
 
   for (i = 0; i < Najw; ++i) {
     printf("\n%3d|", Najw - i);
-     for (j = 0; j < size; ++j)
+     for (j = 0; j < rozm; ++j)
        if (array[j] < temp)
      printf("   ");
        else {
@@ -33,10 +33,10 @@ scanf("%d",&array[w]);
 
 //metryczka-x
   printf("\n    ");
-  for (i = 0; i < size; ++i)
+  for (i = 0; i < rozm; ++i)
     printf("  -", i);
   printf("\n    ");
-  for (i = 0; i < size; ++i)
+  for (i = 0; i < rozm; ++i)
     printf("%3d", i);
   printf("\n");
   return 0;
