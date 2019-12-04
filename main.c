@@ -1,35 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-int liczby[9];
-void histogram();
-int w;
-int i;
-int j;
-int main()
+#include <math.h>
+float add(float a, float b)
 {
-for (w=0; w<10; w++)
+float c=a+b;
+return c;
+
+}
+float test_add()
 {
-scanf("%d",&liczby[w]);
+printf("Oczekiwano: 3 Otrzmyano:%f\n",add(2,1));
+   printf("Oczekiwano: 7.10 Otrzmyano:%1.2f \n",add(4.1,3));
+   printf("Oczekiwano: 4.68 Otrzmyano:%1.2f \n",add(1.34,3.34));
+   printf("Oczekiwano: 1253.795 Otrzmyano:%f \n",add(800.342,453.453));
+   printf("Oczekiwano: 11118111111 Otrzmyano:%11.0f \n",add(7000000,11111111111));
+   printf("Oczekiwano: 0.00000000000010004 Otrzmyano:%f \n",add(0.000000000001,0.0000000000000004));
+   printf("Oczekiwano: 11.14 Otrzmyano:%f \n",add(2/2+3.14,1+6));
 }
-for(i=0;i<=10;i++)
+float main()
 {
-
-
-for (i = 0; i < 10; i++) {
-      printf("[%d] ", i);
-      for ( j = 0; j < liczby[i]; ++j) {
-      printf("*");
-      }
-      printf("\n");
-   }
+   test_add();
+return 0.0;
 }
-
-
-return 0;
-}
-
-
-
-
-
 
