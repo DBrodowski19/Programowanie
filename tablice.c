@@ -92,7 +92,9 @@ if(tabexample[drop]>max)
 max=tabexample[drop];
 }
 drop++;
+
 }
+return max;
 }
 float sumab(float tabexample[], int example2[],float sumtab[])
 {
@@ -101,6 +103,7 @@ int drop;
 for(drop=0;drop<size_of_Array();drop++)
 {
 sumtab[drop]=tabexample[drop]+example2[drop];
+printf(" |%2.0f|",sumtab[drop]);
 
 }
 
@@ -112,7 +115,7 @@ int main()
 size_of_Array();
 
 
-//zadeklarowanie tablicy i jej wypeÅ‚nienie wartoÅ›ciami testowymi
+//zadeklarowanie tablicy i jej wype³nienie wartoœciami testowymi
 
 float tabexample[size_of_Array()];
 int drop;
@@ -128,13 +131,18 @@ example2[drop]=drop+3;
 }
 //trzecia tablica
 float sumtab[size_of_Array()];
-// wypisanie elementÃ³w tablicy 100-elementowej
+// wypisanie elementów tablicy 100-elementowej
 write_Down(tabexample);
 //Sumowanie:
 sum_up(tabexample);
 average(tabexample);
 elmin(tabexample);
 elmax(tabexample);
+
+printf("srednia :%f",average(tabexample));
+printf("\nminimum:%d",elmin(tabexample));
+printf("\n maximum:%f", elmax(tabexample));
 sumab(tabexample,example2,sumtab);
+
     return tabexample;
 }
